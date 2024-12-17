@@ -33,10 +33,34 @@ def run(filename: str) -> None:
     data = []
 
     # open file and read into the `data` list
-    ...
+    file= open(filename)
+    for line in file:
+        data.append(line)
 
-    # return all 3 lists
-    ...
+    #filter out all nondigits
+    data = filter_nondigits(data)
+
+    #filter all outliers
+    data = filter_outliers(data)
+    
+    #calculate window_max
+
+    maximums = window_max(data, 6)
+
+    #calculate window_average
+    avg = window_average(data, 6)
+
+    #calculate window_stddev
+    stdevs = window_stddev(data, 6)
+    
+    #save the plots
+
+    plt.savefig(maximums, 'images/maximums.png')
+    plt.savefig(avg, 'images/averages.png')
+    plt.savefig(stdevs, 'images/stdevs.png')
+    plt.close()
+    #return all 3 lists
+    return maximums, avg, stdevs
 
 
 if __name__ == "__main__":

@@ -2,13 +2,13 @@
 
 Take a look at the file labeled `data/data2.txt`. Why might we have missing values or values that state "NO SIGNAL" in this dataset? While we are currently ignoring these values, what might be the risk of filtering these values out?
 
-[Answer here]
+# There may be missing values because the user pressed enter before they could type their data, and some values may state "NO SIGNAL" because the user made a mistake when measuring the heart rate. A risk in omitting those values is that it could be showing you that something is wrong with the tool used to measure the heart rate data.
 
 ## Question 2
 
 While the "averages.png" and "maximums.png" graphs visualize typical values in our time-series data of heart rates and subsequently describe similar trends, the "stdevs.png" graph visualizes the standard deviations, which results in a graph with less apparent trends. In the context of heart rate, what does the standard deviation describe?
 
-[Answer here]
+# 
 
 ## Question 3
 
